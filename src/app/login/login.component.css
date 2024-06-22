@@ -1,0 +1,34 @@
+#recaptchaContainer{
+    margin-bottom: 5px;
+}
+.container .title-container {
+    font-size: 45px;
+    font-weight: bold;
+}
+.icono{
+    padding: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.container{
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.container .email{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.container .btn{
+    padding-right: 10px;
+}
+
+.botones a{
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    margin: 5px;
+}

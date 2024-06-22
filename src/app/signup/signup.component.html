@@ -1,0 +1,31 @@
+<body>
+  <div class="container">
+    <h1 class="title-container">Crear usuario</h1>
+    <div class="icono">
+      <img src="../../assets/img/user.png" alt="" width="100px">
+    </div>
+  <form>
+      <div class="mb-3">
+          <label for="name" class="form-label">Name:</label>
+          <input type="text" class="form-control" id="name" name="username" [(ngModel)]="username">
+      </div>
+      <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email">
+      </div>
+      <div class="mb-3">
+        <label for="tel" class="form-label">Telefono</label>
+        <input type="text" class="form-control" id="tel" name="phone" [(ngModel)]="phone">
+        <p>Ejemplo: +524492555555</p>
+      </div>
+      <div class="mb-3">
+        <label for="pass" class="form-label">Create password</label>
+        <input type="password" class="form-control" id="pass" name="password" [(ngModel)]="password">
+      </div>
+      @if(errorMsg){
+        <div class="alert alert-danger">{{ errorMsg }}</div>
+      }
+      <a (click)="register()" class="btn btn-primary">Create user</a>
+    </form>
+  </div>
+</body>

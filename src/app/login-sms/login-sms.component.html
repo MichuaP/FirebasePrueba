@@ -1,0 +1,31 @@
+<div class="title-container">
+    <h1>Login con numero de telefono</h1>
+</div>
+<div class="container">
+        <div class="mb-3">
+            <label for="tel" class="form-label">Telefono</label>
+            <input type="text" class="form-control" id="tel" name="phone" [(ngModel)]="phone" required>
+            <p>Ejemplo: +524492555555</p>
+        </div>
+        <div class="captcha">
+            <div #captchaContainer></div>
+        </div>
+        <br>
+        @if(phone.length>10){
+            <a (click)="enviarCodigo()" class="btn btn-primary">Enviar código</a>
+        }
+        <div class="mb-3">
+            <br>
+            <label for="codigo" class="form-label">Codigo de verificación</label>
+            <input type="text" class="form-control" id="tel" name="codigo" [(ngModel)]="codigo" required>
+        </div>
+
+        <a (click)="ingresarTel()" class="btn btn-success">Ingresar</a>
+        <a class="btn btn-primary" [routerLink]="['/login']" routerLinkActive="active" >Regresar</a>
+    
+    @if(errorMsg){
+        <div class="alert alert-danger">{{ errorMsg }}</div>
+    }
+</div>
+
+

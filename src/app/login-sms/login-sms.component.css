@@ -1,0 +1,40 @@
+#recaptchaContainer{
+    margin: 0 auto;
+    text-align: center;
+
+}
+.title-container h1 {
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+}
+.icono{
+    padding: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.container{
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 400px;
+}
+.container .captcha{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 28px;
+}
+
+.container .btn{
+    padding-right: 10px;
+}
+
+.botones a{
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    margin: 5px;
+}

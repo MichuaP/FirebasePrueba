@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg " id="menu">
+  <div class="container-fluid">
+    <a class="navbar-brand white" href="#">Firebase Auth</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link white" [routerLink]="['/users']" routerLinkActive="active" >Ver usuarios registrados</a>
+        </li>
+        @if(myAuth.currentUserSig()==null){
+          <li class="nav-item">
+            <a class="nav-link white" [routerLink]="['/login']" routerLinkActive="active">Log In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link white" [routerLink]="['/signup']" routerLinkActive="active" >Sign Up</a>
+          </li>
+        }@else {
+          <li class="nav-item">
+            <a (click)="logout()" class="nav-link white">Logout</a>
+          </li>
+        }
+      </ul>
+      @if(myAuth.currentUserSig() != null){
+        <span class="navbar-text white">
+          Estás actualmente loggeado
+        </span>
+      }
+    </div>
+  </div>
+</nav>

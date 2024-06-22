@@ -1,0 +1,38 @@
+<body>
+    <div class="container">
+        <form>
+        @if(opcion==0){
+            <div class="title-container">Login</div>
+            <div class="icono">
+                <img src="../../assets/img/user.png" alt="" width="100px">
+                <!-- <i class="fa-regular fa-user" style="color: #193126;"></i> -->
+            </div>
+            <div class="botones">
+                <a class="conEmail btn btn-success" (click)="porCorreo()">Login con email</a><br>
+                <a class="conNumero btn btn-primary" [routerLink]="['/numeroLog']" routerLinkActive="active" >Login con numero telefónico</a>
+            </div>
+            
+            
+        }@else if(opcion==1){
+            <div class="email">
+                <h1 class="title-container">Login con correo electrónico</h1>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="pass" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="pass" name="password" [(ngModel)]="password" required>
+                </div>
+                <a (click)="ingresar()" class="btn btn-primary">Ingresar</a>
+                <a (click)="regresar()" class="btn btn-warning">Regresar</a>
+            </div>
+        }
+        @if(errorMsg){
+            <div class="alert alert-danger">{{ errorMsg }}</div>
+        }
+        </form>
+    </div>
+    
+        
+</body>
